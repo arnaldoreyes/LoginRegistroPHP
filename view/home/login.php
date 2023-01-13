@@ -11,15 +11,15 @@
         </a>    
     </div>
     <div class="titulo">
-        Inicia sesión en CatCom
+        Create una cuenta en CatCom
     </div>
-    <form action="/view/home/verify.php" method="post" class="col-3 login" autocomplete="off">
+    <form action="/LoginRegistroPHP/view/home/verify.php" method="post" class="col-3 login" autocomplete="off">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
             <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
             <div class="box-eye">
                 <button type="button" onclick="showPassword('password', 'eyePassword')">
                     <i id="eyePassword" class="fa-solid fa-eye showPassword"></i>
@@ -32,7 +32,7 @@
         </div>
     </form>
     <div class="col-3 login mt-3">
-        Nuevo en CatCom? <a href="/view/home/singup.php" style="text-decoration: none;">Create una cuenta</a>
+        Nuevo en CatCom? <a href="/LoginRegistroPHP/view/home/singup.php" style="text-decoration: none;">Create una cuenta</a>
     </div>
 </div>
 
