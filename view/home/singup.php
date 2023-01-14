@@ -16,7 +16,7 @@
     <form action="/LoginRegistroPHP/view/home/store.php" method="post" class="col-3 login" autocomplete="off">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-            <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" name="correo" value="<?= (!empty($_GET['correo'])) ? $_GET['correo'] : "" ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
@@ -25,7 +25,7 @@
                     <i id="eyePassword" class="fa-solid fa-eye showPassword"></i>
                 </button>
             </div>
-            <input type="password" name="contraseña" class="form-control" id="password">
+            <input type="password" name="contraseña" value="<?= (!empty($_GET['contraseña'])) ? $_GET['contraseña'] : "" ?>" class="form-control" id="password">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Repite la contraseña</label>
@@ -34,8 +34,13 @@
                     <i id="eyePassword2" class="fa-solid fa-eye showPassword"></i>
                 </button>
             </div>
-            <input type="password" name="confirmarContraseña" class="form-control" id="password2">
+            <input type="password" name="confirmarContraseña" value="<?= (!empty($_GET['confirmarContraseña'])) ? $_GET['confirmarContraseña'] : "" ?>" class="form-control" id="password2">
         </div>
+        <?php if(!empty($_GET['error'])):?>
+            <div id="alertError" style="margin: auto;" class="alert alert-danger mb-2" role="alert">
+                <?= !empty($_GET['error']) ? $_GET['error'] : "" ?>
+            </div>
+        <?php endif;?>
         <div class="d-grid gap-2">
             <button type="submit" class="btn btn-primary">Crear cuenta</button>
         </div>
@@ -47,7 +52,7 @@
 
 <?php
 
-    require_once("C:/laragon/www/LoginRegistroPHP/view/head/footer.php");
+    require_once("C://laragon/www/LoginRegistroPHP/view/head/footer.php");
 
 ?>
 
